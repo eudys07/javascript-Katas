@@ -2,8 +2,15 @@
 	<body>
 		<script>
 			var user_name = prompt('Type your username:');
+			var user_age = prompt('What is your age::');
 
-			alert('The username is ' + user_name)
+			alert('The username is ' + user_name);
+			ageFunct(user_age);
+
+			var ageFunct = function(age){
+				
+				alert('Your age is: ' + age);
+			}
 
 		</script>
 	</body>
