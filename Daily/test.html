@@ -4,13 +4,13 @@
 			var user_name = prompt('Type your username:');
 			var user_age = prompt('What is your age::');
 
-			alert('The username is ' + user_name);
-			ageFunct(user_age);
-
 			var ageFunct = function(age){
 				
 				alert('Your age is: ' + age);
 			}
+
+			alert('The username is ' + user_name);
+			ageFunct(user_age);		
 
 
 			// create a `User` module instance
@@ -18,6 +18,10 @@
 
 			"use strict";
 			user.login( "Eudys A.", "12Battery34!" );
+
+			(function(){
+				user.login( "Eudys A.", "12Battery34!" );
+			})();
 
 
 
@@ -37,11 +41,6 @@
 
 				return publicAPI;
 			}
-
-			
-
-
-
 
 
 		</script>
