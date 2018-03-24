@@ -1,46 +1,60 @@
 <html>
 	<body>
 		<script>
-			var user_name = prompt('Type your username:');
-			var user_age = prompt('What is your age::');
 
-			var ageFunct = function(age){
-				
-				alert('Your age is: ' + age);
+			//var user_name = prompt('Type your username:');
+			//var user_age = prompt('What is your age::');
+			var user_name = 'Eudys';
+			var user_age = '32';
+
+			var ageFunct = function(age){				
+				console.log('Your age is: ' + age);
 			}
 
-			alert('The username is ' + user_name);
+			console.log('The username is ' + user_name);
 			ageFunct(user_age);		
+
+
+
+
+			function User(){
+				var username, password, role;
+
+				function doLogin(user,pw) {
+					username = user ;
+					password = pw;
+					console.log('The user has been logged: '+ username);
+				}
+
+				function getRole(){
+					console.log(this.roleName);
+				}
+
+				function setRole(role_name){
+					role = role_name;
+				}
+
+				var publicAPI = {
+					login: doLogin,
+					roleName: 'Admin',
+					role: getRole
+				};
+
+				return publicAPI;
+			}
 
 
 			// create a `User` module instance
 			var user = User();
 
-			"use strict";
 			user.login( "Eudys A.", "12Battery34!" );
 
 			(function(){
 				user.login( "Eudys A.", "12Battery34!" );
+				//user.roleName('Supervisor');
+				user.role();
 			})();
 
-
-
-			function User(){
-				var username, password;
-
-				function doLogin(user,pw) {
-					username = user;
-					password = pw;
-
-					console.log('The user has been logged: '+ user)
-				}
-
-				var publicAPI = {
-					login: doLogin
-				};
-
-				return publicAPI;
-			}
 
 
 		</script>
