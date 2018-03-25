@@ -27,7 +27,17 @@
 				}
 
 				function getRole(){
-					console.log(this.roleName('Admin'));
+					console.log('Getting role: '+this.roleName);
+				}
+
+				function gettingNewRole(){
+					var privateAPI = {
+						roleName: 'Supervisor',
+						role: getRole,
+					};
+
+					
+					console.log('Getting new role: '+ privateAPI.role());									
 				}
 
 				function setRole(role_name){
@@ -36,10 +46,12 @@
 					return role;
 				}
 
+
 				var publicAPI = {
 					login: doLogin,
-					roleName: setRole,
-					role: getRole
+					roleName: 'Admin',
+					role: getRole,
+					newRole: gettingNewRole
 				};
 
 				return publicAPI;
@@ -53,7 +65,7 @@
 
 			(function(){
 				user.login( "Eudys A.", "12Battery34!" );
-				user.roleName("Supervisor");
+				//user.roleName("Supervisor");
 				user.role();
 			})();
 
