@@ -32,11 +32,13 @@
 
 				function setRole(role_name){
 					role = role_name;
+					console.log('role was setted: '+role);
+					return role;
 				}
 
 				var publicAPI = {
 					login: doLogin,
-					roleName: 'Admin',
+					roleName: setRole,
 					role: getRole
 				};
 
@@ -51,7 +53,7 @@
 
 			(function(){
 				user.login( "Eudys A.", "12Battery34!" );
-				//user.roleName('Supervisor');
+				user.roleName("Supervisor");
 				user.role();
 			})();
 
