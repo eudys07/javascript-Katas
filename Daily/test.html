@@ -19,26 +19,27 @@
 			function User(){
 				var username, password, role;
 
+
 				function doLogin(user,pw) {
 					username = user ;
 					password = pw;
 					console.log('The user has been logged: '+ username);
 				}
 
+
 				function getRole(){
 					console.log('Getting role: '+this.roleName);
 				}
+
 
 				function gettingNewRole(){
 					var privateAPI = {
 						roleName: 'Supervisor',
 						role: getRole,
-					};
-
-					
-					console.log('Getting new role: '+ privateAPI.role());z
-
+					};					
+					console.log('Getting new role: '+ privateAPI.role());
 				}
+
 
 				function setRole(role_name){
 					role = role_name;
@@ -47,11 +48,19 @@
 				}
 
 
+				function printingName(){
+					console.log(user_name);
+					console.dir(user_name);
+				}
+
+
 				var publicAPI = {
 					login: doLogin,
 					roleName: 'Admin',
 					role: getRole,
-					newRole: gettingNewRole
+					newRole: gettingNewRole,
+					mainName: printingName
+
 				};
 
 				return publicAPI;
