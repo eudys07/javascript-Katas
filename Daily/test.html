@@ -79,33 +79,30 @@
 			})();*/
 
 
-	/*
-	Please excute step by step:
-	1. exampleSts.statement2('This value is from outside function');
-	2.console.dir(exampleSts.statement2)
+			/*
+			Please excute step by step:
+			1. exampleSts.statement2('This value is from outside function');
+			2.console.dir(exampleSts.statement2)
 
-	*/
+			*/
 
-	function ExampleY(){
-		var varsts2;
+			function ExampleY(){
+				var varsts2;
 
-			
-		function printStatement2(sts2){
-			varsts2 = sts2;
-			console.log(varsts2);
-		}
-		
-		var handley = {
-			statement2: printStatement2		
-		};
-		
-		return handley;	
-	}
+					
+				function printStatement2(sts2){
+					varsts2 = sts2;
+					console.log(varsts2);
+				}
+				
+				var handley = {
+					statement2: printStatement2		
+				};
+				
+				return handley;	
+			}
 
-	var exampleSts = ExampleY();
-
-
-
+			var exampleSts = ExampleY();
 
 
 		</script>
