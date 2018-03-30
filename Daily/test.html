@@ -107,8 +107,8 @@
 
 
 			//Example of prototype
-
-			 const food = {
+			/*
+			const food = {
 
 				init: function(type){
 					this.type = type;
@@ -123,6 +123,18 @@
 			const bread = Object.create(food);
 			bread.init('bread');
 			bread.eat();
+			*/
+
+
+			var food = {
+				init: function(type){
+					this.type = type;
+				},
+				eat: function(){
+					console.log('this is a real function:'+ type);
+				}
+
+			}
 
 
 		</script>
