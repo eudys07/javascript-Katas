@@ -69,7 +69,7 @@
 			// create a `User` module instance
 			var user = User();
 
-			user.login( "Eudys A.", "12Battery34!" );
+			  user.login( "Eudys A.", "12Battery34!" );
 
 			//IIFE
 			/*(function(){
@@ -103,6 +103,24 @@
 			}
 
 			var exampleSts = ExampleY();
+
+
+
+			//Example of prototype
+
+			var Food = fucntion(){
+
+				init: function(type){
+					this.type = type;
+				}
+				eat: function(){
+					console.log('This is a '+ this.type);
+				}
+			}
+
+			food = Food();
+			food.init('bread');
+			food.eat();
 
 
 		</script>
