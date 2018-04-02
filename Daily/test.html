@@ -141,7 +141,13 @@
 			salad.sauce = 'honey mustard';
 
 
-			//var taco = Obejct.create();
+			var taco = Object.create(salad);
+			taco.meat = 'Chicken';
+		 	taco.lunch = function(){
+		 		console.log('I want a taco whith' + this.meat + ' and my '+ this.type + 'with '+ this.sauce);
+		 	};
+
+ 
 
 
 
