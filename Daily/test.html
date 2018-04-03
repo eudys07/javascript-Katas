@@ -143,12 +143,9 @@
 
 			var taco = Object.create(salad);
 			taco.meat = 'Chicken';
-		 	taco.lunch = {
-		 		menu: function(){
-		 			console.log('I want a taco whith ' + this.meat + ' and my '+ this.type + ' with '+ this.sauce)
-		 		}
-		 	};
-
+		 	taco.lunch = function(){
+		 		console.log(this);
+		 	}
  
 
 
