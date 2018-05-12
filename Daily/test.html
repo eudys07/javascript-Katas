@@ -4,7 +4,7 @@
 
 			//var user_name = prompt('Type your username:');
 			//var user_age = prompt('What is your age::');
-			var user_name = 'Eudys';
+			/*var user_name = 'Eudys';
 			var user_age = '32';
 
 			var ageFunct = function(age){				
@@ -84,7 +84,7 @@
 
 			*/			 
 
-			function ExampleY(){
+		/*	function ExampleY(){
 				var varsts2;
 
 					
@@ -102,7 +102,7 @@
 
 			var exampleSts = ExampleY();
 
-
+*/
 
 			//Example of prototype
 			/*
@@ -159,7 +159,49 @@
 			tab.c = "Hello proto";*/
 
 
-			
+			var Task = function(name){
+				this.name = name;
+				this.completed = false;
+
+				this.complete = function() {
+					console.log('completing task ' + this.name);
+					this.completed = true;
+				}
+
+				this.save = function() {
+					if(this.completed){
+						console.log("Saving task " +this.name+" in database...." );
+						this.completed = false;
+					}
+					else{
+						console.log("This task "+this.name+" is not completed yet.");
+					}
+				}
+			}
+
+			console.log("CREATING TASKS: task1, task2, task3 and task4");
+			var task1 = new Task("Constructor");
+			var task2 = new Task("Proto");
+			var task3 = new Task("clousure");
+			var task4 = new Task("singleton");
+
+			console.log("COMPLTETING TASK: tas1 AND task3");
+			task1.complete();
+			task3.complete();
+
+
+			console.log("SAVING ALL THE TASK");
+			task1.save();
+			task2.save();
+			task3.save();
+			task4.save();
+
+
+			console.log("SAVING ALL THE TASK AGAIN");
+			task1.save();
+			task2.save();
+			task3.save();
+			task4.save();
 
 
 		</script>
