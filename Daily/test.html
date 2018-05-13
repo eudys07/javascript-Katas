@@ -162,7 +162,7 @@
 			var Task = function(name){
 				this.name = name;
 				this.completed = false;
-
+				/*
 				this.complete = function() {
 					console.log('completing task ' + this.name);
 					this.completed = true;
@@ -177,7 +177,24 @@
 						console.log("This task "+this.name+" is not completed yet.");
 					}
 				}
+				*/
 			}
+
+			Task.prototype.complete = function () {
+				console.log('completing task ' + this.name);
+				this.completed = true;
+			}
+
+			Task.prototype.save = function () {
+				if(this.completed){
+						console.log("Saving task " +this.name+" in database...." );
+						this.completed = false;
+					}
+					else{
+						console.log("This task "+this.name+" is not completed yet.");
+					}
+			}
+				
 
 			console.log("CREATING TASKS: task1, task2, task3 and task4");
 			var task1 = new Task("Constructor");
