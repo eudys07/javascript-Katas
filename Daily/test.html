@@ -233,7 +233,26 @@
 			task4.save();
 */
 
-
+		function Food() {
+			this.type = "Rice";
+			this.foodTime = "I Don't know the time yet, I should calculate it using 'calcTime()'";	
+			var time = new Date();
+			this.calcTime = function(){
+				
+				
+				if (time.getHours() > 11 && time.getHours() < 2) {
+					this.foodTime = "Lunch Time";
+				}
+				else if (time.getHours() <= 11) {
+					this.foodTime = "Breakfast Time";
+				}
+				else if (time.getHours() >= 2) {
+					this.foodTime = "Dinner Time";
+				}
+				
+				return this.foodTime;
+			}
+		}
 
 
 
