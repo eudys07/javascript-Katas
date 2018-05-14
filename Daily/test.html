@@ -254,6 +254,12 @@
 			}
 		}
 
+		Object.defineProperty(food, 'eat', {
+			get: function(){
+				return "Let's eat "+ this.type;
+			}
+		});
+
 
 
 		</script>
