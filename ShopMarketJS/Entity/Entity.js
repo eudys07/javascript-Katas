@@ -7,6 +7,8 @@ function Product() {
 	this.size = null;
 	this.weight = null;
 
+}
+
 /*
 var x = new Product();
 x.id =  1;
@@ -34,4 +36,3 @@ w.size = "3 meter";
 w.weight = "45 pound";
 */
 
-}
