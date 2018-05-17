@@ -1,23 +1,23 @@
 function ProductManager() {
 	
-	var products = [];
-	
-	this.add =  function(product) {
+	this.products = [];
+
+
+	ProductManager.prototype.add =  function(product) {
 		products.push(product);
 	}
-
-	this.edit =  function(product) {
+	
+	ProductManager.prototype.edit =  function(product) {
 		var indexItem = getItemIndex(product.id);
 		products[indexItem] = product;
 	};
 
-	this.delete = function(productId) {
+	ProductManager.prototype.delete = function(productId) {
 		var indexItem = getItemIndex(productId)
 		products.splice(indexItem,1);
 	}
 
-
-	this.getId = function(id){
+	ProductManager.prototype.getId = function(productId){
 		products.foreach(
 			function(element){
 				if (element.id == id){
@@ -27,16 +27,16 @@ function ProductManager() {
 		);
 	}
 
-	this.getAll = function(){
+	ProductManager.prototype.getAll = function(){
 		return products;
 	}
 
 	var getItemIndex = function(productId){
 		for (var i  = 0; i < products.lenght; i++) {
-			if (products[i].id == productId) {
+			if (this.products[i].id == productId) {
 				return i;
 			}
 		}
 	};
-	
 }
+
