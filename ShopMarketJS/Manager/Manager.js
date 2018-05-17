@@ -38,5 +38,6 @@ function ProductManager() {
 			}
 		}
 	};
+	
 }
 
