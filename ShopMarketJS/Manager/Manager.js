@@ -26,6 +26,7 @@ function ProductManager() {
 			}
 		);
 	}
+	
 
 	ProductManager.prototype.getAll = function(){
 		return products;
