@@ -26,11 +26,12 @@ function ProductManager() {
 			}
 		);
 	}
-	
+
 
 	ProductManager.prototype.getAll = function(){
 		return products;
 	}
+
 
 	var getItemIndex = function(productId){
 		for (var i  = 0; i < products.lenght; i++) {
@@ -41,4 +42,6 @@ function ProductManager() {
 	};
 	
 }
+
+
 
