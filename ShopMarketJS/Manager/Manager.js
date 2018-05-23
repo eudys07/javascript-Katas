@@ -33,6 +33,7 @@ function ProductManager() {
 	}
 
 
+
 	var getItemIndex = function(productId){
 		for (var i  = 0; i < products.lenght; i++) {
 			if (this.products[i].id == productId) {
