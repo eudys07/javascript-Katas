@@ -17,6 +17,7 @@ function ProductManager() {
 		products.splice(indexItem,1);
 	}
 
+
 	ProductManager.prototype.getId = function(productId){
 		products.foreach(
 			function(element){
