@@ -27,11 +27,7 @@ function ProductManager() {
 			}
 		);
 	}
-<<<<<<< HEAD
-		
-=======
-
->>>>>>> bf7ed03d7c21c67e42279254b34752ec579dc887
+	
 
 	ProductManager.prototype.getAll = function(){
 		return products;
