@@ -21,3 +21,5 @@ class Products{
 		this.price = price;
 	}
 }
+
+export default Products;
