@@ -1,4 +1,4 @@
-class Products{
+class Product{
 
 	construtor(){
 		this.name;
@@ -17,9 +17,9 @@ class Products{
 		return this.price;
 	}
 
-	getPrice(price){
+	setPrice(price){
 		this.price = price;
 	}
 }
 
-export default Products;
+export default Product;
