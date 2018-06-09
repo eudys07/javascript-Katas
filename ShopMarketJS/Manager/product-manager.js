@@ -1,4 +1,4 @@
-import Product from '../entity/product.js'
+//import Product from '../entity/product.js'
 
 class ProductManager{
 	
