@@ -1,6 +1,7 @@
 //import Product from '../entity/product.js'
 
 class ProductManager{
+	import {getMethods as product} from '../entity/product.js';
 	
 	constructor(){
 		this.product = new Product(); 
