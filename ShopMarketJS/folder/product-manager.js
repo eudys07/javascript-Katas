@@ -24,6 +24,7 @@ class ProductManager{
 
 }
 
+
 let mng = new ProductManager();	
 export function getProdutMananger(){
 	
